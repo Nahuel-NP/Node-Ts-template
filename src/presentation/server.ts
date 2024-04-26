@@ -11,6 +11,7 @@ interface Options {
 
 export class Server {
   public readonly app = express();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private serverListener?: any;
   private readonly port: number;
   private readonly publicPath: string;
@@ -23,7 +24,7 @@ export class Server {
     this.routes = routes;
   }
 
-  async start() {
+  start() {
 
 
     //* Middlewares
@@ -54,7 +55,8 @@ export class Server {
 
   }
 
-  public close() {
+  close() {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
     this.serverListener?.close();
   }
 }
