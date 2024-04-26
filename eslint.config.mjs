@@ -14,6 +14,10 @@ export default tseslint.config(
     rules: {
       "@typescript-eslint/no-extra-semi": "error",
       "@typescript-eslint/no-unsafe-argument": "warn",
+      "@typescript-eslint/no-unused-vars":"warn",
+      "@typescript-eslint/require-await":"warn",
+      "@typescript-eslint/restrict-template-expressions":"off",
+      "@typescript-eslint/no-explicit-any":"off"
     },
   },
   {
